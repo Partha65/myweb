@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <style>
+            body{
+                background: rgba(0, 0, 0, 0.856);
+                background-size: cover;
+            }
+            #ld{
+                width: 400px;
+                height: 300px;
+                position: fixed;
+                top: 17vw;
+                left: 35vw;
+                right: 50%;
+                bottom: 15vw;
+                background-color: rgba(0, 0, 0, 0);
+            }
+            #sld{
+                height: 60px;
+                width: 60px;
+                position: relative;
+                top: 40%;
+                left: 48%;
+                background-color: rgba(10, 10, 10, 0.185);
+            }
+          #ld #sld span{
+            background-color: rgb(4, 199, 248);
+            position: absolute; 
+          }
+          #i{
+             
+              height: 1px;
+              width: 30%;
+              animation: animate1 1s linear infinite;
+              overflow: hidden;
+          } 
+          @keyframes animate1{
+    0%{
+       left: 2%;
+    }
+    50% {
+        left: 20%;
+    }
+    
+    100%{
+        left: 70%;
+    }
+          }
+          #ii{
+    top: 58px;
+    height: 2px;
+    width: 30%;
+    animation: animate2 1s linear infinite;
+    animation: animate2 1s linear infinite;
+
+          }
+          @keyframes animate2{
+    0%{
+       left: 70%; 
+    }
+    50%{
+        left: 20%;
+    }
+    
+    100%{
+        left: 2%;
+    }
+          } 
+          #iii{
+    height: 30%;
+    width: 1.5px;
+    animation: animate3 1s linear infinite;
+          }
+          @keyframes animate3{
+    0%{
+       top: 70%;
+    }
+    50%{
+        top: 20%;
+    }
+    100%{
+        top: 2%;
+    }
+          }
+          #iv{
+    left: 58px;
+    height: 30%;
+    width: 2px;
+    animation: animate4 1s linear infinite;
+          }
+          @keyframes animate4{
+    0%{
+       top: 2%;
+    }
+    50%{
+        top: 20%;
+    }
+    100%{
+        top: 70%;
+    }
+          }
+          #ld h1{
+              position: relative;
+              top: 40%;
+              left: 45%;
+              color: rgba(166, 233, 67, 0.884);
+              font-size: medium;
+          }
+          p{
+              color: aliceblue;
+              position:relative;
+          }
+          #pi{
+              top: 13%;
+              left: 60%;
+              font-size: 40px;
+              opacity: 1;
+              animation: anmp1 5s linear ;
+          }
+          @keyframes anmp1{
+                1%{opacity: 0;}
+
+                50%,100%{opacity: 1;}
+          }
+          #pp{
+              top: -15.7%;
+              left: 62%;
+              font-size: 40px;
+              opacity: 0;
+              animation: anmp2 2s linear infinite;
+          }
+          @keyframes anmp2{
+              40%{opacity: 1;
+                }
+              50%{opacity: 0;}
+              70%{opacity: 1;}
+              80%{opacity: 1;}
+              90%{opacity: 0;}
+              
+          }
+          #ppp{
+              top: -44.5%;
+              left: 64%;
+              font-size: 40px;
+              opacity: 1;
+              animation: anmp3 1s linear infinite;
+          }
+          @keyframes anmp3{
+              10%{opacity: 0;}
+              50%{opacity: 0;}
+              70%{opacity: 1;}
+          }
+          a{
+              text-decoration: none;
+              color: greenyellow;
+              position: absolute;
+              bottom: 30%;  
+              left: 30%;
+              visibility: hidden;
+          }
+        </style>
+    </head>
+    <body>
+        <div id="ld">
+            <div id="sld">
+                <span id="i"></span>
+                <span id="ii"></span>
+                <span id="iii"></span>
+                <span id="iv"></span>
+            </div>
+            <a id="a" href="login.html" target="blank">your page is ready clik here</a>
+            <h1 id="h">Loading</h1>
+            <p id="pi">.</p>
+            <p id="pp">.</p>
+            <p id="ppp">.</p>
+            
+        </div>
+        <script>
+            setTimeout(()=>{
+                document.getElementById("sld").style.opacity=0;
+                document.getElementById("pi").style.opacity=0;
+                document.getElementById("pp").style.display="none";
+                document.getElementById("ppp").style.display="none";
+                document.getElementById("h").style.display="none";
+                document.getElementById("a").style.visibility="visible";
+            },10000);
+        </script>
+    </body>
+</html>
